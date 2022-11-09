@@ -28,8 +28,7 @@ namespace KayBarhoum
         public string fileLines;
         [HideInInspector]
         public string text;
-        [SerializeField] private string[] plantsL;
-        //[SerializeField] List<string> plantL = new List<string>();
+       [SerializeField] List<string> plantL = new List<string>();
         private string plantLine;
         private string posPlant;
         private int posPlant2;
@@ -50,12 +49,8 @@ namespace KayBarhoum
                 Debug.Log("Max Limit");
             }
 
-            greenhouseTextFile = Application.streamingAssetsPath + "/GreenHouse" + ".txt";
-            text = File.ReadAllText(greenhouseTextFile);
-            plantsL = text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
-            //plantL.Add(text);
-            plantLine = plantsLeader.healthPlant;
-            index = GetComponent<PlantDictionary>().plantsL.Count();
+            
+           
 
 
         }
@@ -74,7 +69,7 @@ namespace KayBarhoum
         {
             if (posPlant == "|Plant Health: 3|" + "|Plant Health: 2|" + "|Plant Health: 1|" + "|Plant Health: 4|")
             {
-                posPlant = GetComponent<PlantDictionary>().plantsL.ToList().ToString();
+               
 
                 Debug.Log("Found It");
             }

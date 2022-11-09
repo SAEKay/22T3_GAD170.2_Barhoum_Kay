@@ -15,6 +15,7 @@ namespace KayBarhoum
         // Plant List in a Array //
         private List<string> _plantArray = new List<string>();
 
+        private List<DataStore> Data = new List<DataStore>();
 
         // Max Price & Health Range for Plants //
 
@@ -29,7 +30,7 @@ namespace KayBarhoum
         private float randomPrice;
         private float randomHealth;
         private string randomArray;
-
+        private string store;
         // Return Floats + String
 
         [HideInInspector]
@@ -90,10 +91,17 @@ namespace KayBarhoum
             returnArray = randomArray;
             returnPrice = randomPrice;
             returnHealth = randomHealth;
+            
 
-            plantCaller.text = "You found a " + returnArray + ", this flower is worth $" + returnPrice + " and the health of this flower is " + returnHealth + "/10. Do you want to keep or reject it?".ToString();
+            plantCaller.text = " You found a " + returnArray + " worth $" + returnPrice + " Health " + returnHealth + "/10 What will you do? ".ToString();
 
 
+        }
+
+        public void AddToData()
+        {
+            //store == _plantArray;
+           // Data.add = (_plantArray);
         }
 
     }

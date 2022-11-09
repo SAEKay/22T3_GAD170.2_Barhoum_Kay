@@ -254,11 +254,6 @@ MonoBehaviour:
   plantList: {fileID: 0}
   scoreSystem: {fileID: 0}
   sceneLoader: {fileID: 0}
---- !u!1 &114672550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 254206241185886022, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
-  m_PrefabInstance: {fileID: 254206241281649888}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &114672551 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 254206241185886023, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
@@ -269,32 +264,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 254206241185886025, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
   m_PrefabInstance: {fileID: 254206241281649888}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114672550}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114672556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114672550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1cd1f5c88285f4cb78b890d808dd1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManger: {fileID: 0}
-  plantsLeader: {fileID: 0}
-  textWords: {fileID: 0}
-  Plant: {fileID: 0}
-  greenhouseTextFile: 
-  fileLines: 
-  text: 
-  plantsL: []
 --- !u!1 &154732313
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +306,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 31}
-  m_SizeDelta: {x: 444.5937, y: 38.4057}
+  m_AnchoredPosition: {x: 12, y: 27}
+  m_SizeDelta: {x: 1435.2676, y: 38.4057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154732315
 MonoBehaviour:
@@ -363,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
+  m_Color: {r: 0, g: 0.0033083386, b: 0.01886791, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -372,10 +347,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 0
+    m_FontSize: 25
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -404,7 +379,6 @@ GameObject:
   - component: {fileID: 173409401}
   - component: {fileID: 173409400}
   - component: {fileID: 173409399}
-  - component: {fileID: 173409402}
   m_Layer: 5
   m_Name: Button Reject
   m_TagString: Untagged
@@ -476,7 +450,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 173409400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 231072155}
+        m_TargetAssemblyTypeName: KayBarhoum.PlantsList, Assembly-CSharp
+        m_MethodName: PlantToText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 231072151}
+        m_TargetAssemblyTypeName: KayBarhoum.GameManager, Assembly-CSharp
+        m_MethodName: RoundCountDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &173409400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,23 +513,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173409397}
   m_CullTransparentMesh: 1
---- !u!114 &173409402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173409397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d1e0ca994db724f85bf6eced31f7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantsL: {fileID: 0}
-  greenHouseUI: {fileID: 0}
-  canvasGame: {fileID: 0}
-  canvasGreenRoom: {fileID: 0}
-  leaderB: {fileID: 0}
 --- !u!1 &231072150
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0b1baa9cd32e543a1d04bf5caf3fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantCaller: {fileID: 0}
+  plantCaller: {fileID: 154732316}
   returnPrice: 0
   returnHealth: 0
   returnArray: 
@@ -654,7 +635,7 @@ MonoBehaviour:
   greenhouseTextFile: 
   fileLines: 
   text: 
-  plantsL: []
+  plantL: []
 --- !u!114 &231072157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +729,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.36862746, g: 0.6901961, b: 0.41327113, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1154,8 +1135,6 @@ GameObject:
   - component: {fileID: 1868936619}
   - component: {fileID: 1868936618}
   - component: {fileID: 1868936617}
-  - component: {fileID: 1868936621}
-  - component: {fileID: 1868936620}
   m_Layer: 5
   m_Name: Button Keep
   m_TagString: Untagged
@@ -1228,9 +1207,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 231072154}
-        m_TargetAssemblyTypeName: KayBarhoum.SceneLoader, Assembly-CSharp
-        m_MethodName: Resume
+      - m_Target: {fileID: 231072155}
+        m_TargetAssemblyTypeName: KayBarhoum.PlantsList, Assembly-CSharp
+        m_MethodName: PlantToText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 231072151}
+        m_TargetAssemblyTypeName: KayBarhoum.GameManager, Assembly-CSharp
+        m_MethodName: RoundCountDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1278,39 +1269,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868936615}
   m_CullTransparentMesh: 1
---- !u!114 &1868936620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868936615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d1e0ca994db724f85bf6eced31f7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantsL: {fileID: 0}
-  greenHouseUI: {fileID: 0}
-  canvasGame: {fileID: 0}
-  canvasGreenRoom: {fileID: 0}
-  leaderB: {fileID: 0}
---- !u!114 &1868936621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868936615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e4e42dd34f12840b27ac1e7f09e8de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roundCounter: {fileID: 0}
-  plantList: {fileID: 0}
-  scoreSystem: {fileID: 0}
-  sceneLoader: {fileID: 0}
 --- !u!1 &1907129137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1725,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 254206241185886025, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
       propertyPath: m_Text
-      value: round
+      value: 'Round:'
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 254206241185886024, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
+    - {fileID: 254206241185886027, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eed3f7cde3f54814f81c087397348c04, type: 3}
